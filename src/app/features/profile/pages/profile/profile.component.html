@@ -1,0 +1,49 @@
+<div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+    <p-tabView [(activeIndex)]="activeTab">
+        <!-- Личные данные -->
+        <p-tabPanel header="Личные данные">
+            <div class="grid">
+                <div class="col-12 lg:col-6">
+                    <div class="flex flex-column gap-4">
+                        <div class="flex flex-column gap-2">
+                            <label for="username" class="text-900">Имя пользователя:</label>
+                            <input id="username" type="text" pInputText value="Мария" class="w-full">
+                        </div>
+
+                        <div class="flex flex-column gap-2">
+                            <label for="email" class="text-900">Email:</label>
+                            <input id="email" type="email" pInputText value="myemail@m.com" class="w-full">
+                        </div>
+
+                        <button pButton 
+                                label="Изменить пароль" 
+                                class="p-button-secondary w-fit"
+                                (click)="onChangePassword()">
+                        </button>
+
+                        <div class="surface-100 border-round p-4">
+                            <div class="flex align-items-center justify-content-between">
+                                <span class="text-900 font-medium">Количество бонусов:</span>
+                                <span class="text-primary font-medium">1,85 BYN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p-tabPanel>
+
+        <!-- Мои заказы -->
+        <p-tabPanel header="Мои заказы">
+            <div class="text-700 text-center py-8">
+                У вас пока нет заказов
+            </div>
+        </p-tabPanel>
+
+        <!-- Избранное -->
+        <p-tabPanel header="Избранное">
+            <div class="text-700 text-center py-8">
+                Список избранного пуст
+            </div>
+        </p-tabPanel>
+    </p-tabView>
+</div> 

@@ -1,0 +1,111 @@
+<div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+    <div class="grid">
+        <!-- Изображение товара -->
+        <div class="col-12 lg:col-6">
+            <div class="flex flex-column">
+                <img src="/assets/images/phone.jpg" class="w-full" alt="Product Image">
+                <div class="flex gap-3 mt-3">
+                    <div *ngFor="let i of [1,2,3,4]" class="border-1 border-round cursor-pointer" 
+                         style="width: 70px; height: 70px;">
+                        <img src="/assets/images/phone.jpg" class="w-full h-full border-round">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Информация о товаре -->
+        <div class="col-12 lg:col-6 pl-lg-6">
+            <div class="flex flex-column">
+                <h1 class="text-3xl font-medium mb-3">Смартфон Xiaomi Redmi Note 13 8GB/256GB с NFC</h1>
+                
+                <div class="flex align-items-center mb-4">
+                    <span class="text-xl font-medium">1020,0 BYN</span>
+                    <span class="text-xl line-through text-500 ml-3">1220,0 BYN</span>
+                    <span class="text-sm bg-primary text-white px-2 py-1 border-round ml-3">-16%</span>
+                </div>
+
+                <!-- Выбор RAM -->
+                <span class="text-xl mb-3">Оперативная память</span>
+                <div class="flex gap-3 mb-4">
+                    <button pButton 
+                            [class.p-button-outlined]="selectedRAM !== '8ГБ'"
+                            (click)="selectedRAM = '8ГБ'"
+                            label="8ГБ">
+                    </button>
+                    <button pButton 
+                            [class.p-button-outlined]="selectedRAM !== '16ГБ'"
+                            (click)="selectedRAM = '16ГБ'"
+                            label="16ГБ">
+                    </button>
+                </div>
+
+                <!-- Выбор Storage -->
+                <span class="text-xl mb-3">Постоянная память</span>
+                <div class="flex gap-3 mb-4">
+                    <button pButton 
+                            [class.p-button-outlined]="selectedStorage !== '128ГБ'"
+                            (click)="selectedStorage = '128ГБ'"
+                            label="128ГБ">
+                    </button>
+                    <button pButton 
+                            [class.p-button-outlined]="selectedStorage !== '256ГБ'"
+                            (click)="selectedStorage = '256ГБ'"
+                            label="256ГБ">
+                    </button>
+                </div>
+
+                <!-- Выбор цвета -->
+                <span class="text-xl mb-3">Цвет</span>
+                <div class="flex gap-3 mb-4">
+                    <button pButton 
+                            [class.p-button-outlined]="selectedColor !== 'серый'"
+                            (click)="selectedColor = 'серый'"
+                            label="серый">
+                    </button>
+                    <button pButton 
+                            [class.p-button-outlined]="selectedColor !== 'черный'"
+                            (click)="selectedColor = 'черный'"
+                            label="черный">
+                    </button>
+                    <button pButton 
+                            [class.p-button-outlined]="selectedColor !== 'зелёный'"
+                            (click)="selectedColor = 'зелёный'"
+                            label="зелёный">
+                    </button>
+                </div>
+
+                <!-- Кнопки действий -->
+                <div class="flex gap-3 mt-4">
+                    <button pButton label="В корзину" class="p-button-lg"></button>
+                    <button pButton icon="pi pi-heart" 
+                            class="p-button-lg p-button-outlined"
+                            style="width: 4rem">
+                    </button>
+                </div>
+
+                <!-- Характеристики -->
+                <div class="mt-6">
+                    <span class="text-xl font-medium">Характеристики</span>
+                    <ul class="list-none p-0 mt-3">
+                        <li class="flex justify-content-between py-2">
+                            <span class="text-700">Дата выхода на рынок</span>
+                            <span>2024г.</span>
+                        </li>
+                        <li class="flex justify-content-between py-2">
+                            <span class="text-700">Частота обновлений</span>
+                            <span>90 Гц</span>
+                        </li>
+                        <li class="flex justify-content-between py-2">
+                            <span class="text-700">Емкость аккумулятора</span>
+                            <span>5 030 мА·ч</span>
+                        </li>
+                        <li class="flex justify-content-between py-2">
+                            <span class="text-700">Тип аккумулятора</span>
+                            <span>Li-ion</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

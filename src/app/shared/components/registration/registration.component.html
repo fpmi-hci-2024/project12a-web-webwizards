@@ -1,0 +1,46 @@
+<p-dialog 
+    [(visible)]="visible" 
+    [modal]="true"
+    [draggable]="false"
+    [resizable]="false"
+    (onHide)="onHide()"
+    [header]="'Регистрация'"
+    styleClass="registration-dialog"
+    [style]="{width: '90vw', maxWidth: '500px'}"
+    [contentStyle]="{'padding': '2rem'}">
+    
+    <div class="flex flex-column gap-4">
+        <div class="flex flex-column gap-2">
+            <label for="username" class="text-900">Введите логин</label>
+            <input id="username" type="text" pInputText class="w-full">
+        </div>
+
+        <div class="flex flex-column gap-2">
+            <label for="email" class="text-900">Введите электронную почту</label>
+            <input id="email" type="email" pInputText class="w-full">
+        </div>
+
+        <div class="flex flex-column gap-2">
+            <label for="password" class="text-900">Пароль</label>
+            <input id="password" type="password" pInputText class="w-full">
+        </div>
+
+        <div class="flex flex-column gap-2">
+            <label for="confirmPassword" class="text-900">Повторите пароль</label>
+            <input id="confirmPassword" type="password" pInputText class="w-full">
+        </div>
+
+        <button pButton 
+                label="Зарегистрироваться"
+                class="p-button-primary"
+                (click)="register()">
+        </button>
+
+        <div class="text-center">
+            <span class="text-600">Уже есть аккаунт? </span>
+            <a href="#" class="text-primary no-underline" (click)="openLogin(); $event.preventDefault()">
+                Войти
+            </a>
+        </div>
+    </div>
+</p-dialog> 

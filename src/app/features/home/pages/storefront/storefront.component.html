@@ -1,0 +1,150 @@
+<div class="surface-section grid h-30rem">
+    <div class="col-12 lg:col-6 p-0">
+        <div class="h-full w-full bg-no-repeat bg-cover bg-center" 
+             style="background-image: url('/assets/images/banner.png');">
+        </div>
+    </div>
+    
+    <div class="col-12 lg:col-6 bg-blue-50 flex align-items-center">
+        <div class="px-4 mx-4 lg:px-6 lg:mx-6">
+            <span class="block text-5xl font-medium text-blue-900 mb-4">Техника для жизни</span>
+            <span class="block text-3xl text-blue-700 mb-4">Регистрируйся прямо сейчас и совершай покупки</span>
+            <button pButton 
+                    pRipple
+                    type="button"
+                    label="Зарегистрироваться"
+                    class="p-button-primary text-xl"
+                    (click)="openRegistration()">
+            </button>
+        </div>
+    </div>
+</div>
+<div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+    <div class="text-900 text-4xl font-medium mb-4 text-center lg:text-left">Популярные категории</div>
+    <div class="grid -mt-3 -ml-3 -mr-3">
+        <div class="col flex px-3 flex-column mt-4 md:mt-0">
+            <div class="p-4 border-round bg-blue-50 text-center cursor-pointer"
+                 [routerLink]="['/product/list', 'smartphones']">
+                <i class="pi pi-mobile text-5xl text-blue-500 mb-3"></i>
+                <span class="text-900 text-xl">Смартфоны</span>
+            </div>
+        </div>
+        <div class="col flex px-3 flex-column mt-4 md:mt-0">
+            <div class="p-4 border-round bg-yellow-50 text-center cursor-pointer"
+                 [routerLink]="['/product/list', 'computers']">
+                <i class="pi pi-desktop text-5xl text-yellow-500 mb-3"></i>
+                <span class="text-900 text-xl">Компьютеры</span>
+            </div>
+        </div>
+        <div class="col flex px-3 flex-column mt-4 md:mt-0">
+            <div class="p-4 border-round bg-green-50 text-center cursor-pointer"
+                 [routerLink]="['/product/list', 'headphones']">
+                <i class="pi pi-volume-up text-5xl text-green-500 mb-3"></i>
+                <span class="text-900 text-xl">Наушники</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+    <div class="text-900 font-medium text-4xl mb-4">Хиты продаж</div>
+    <div class="grid -mt-3 -ml-3 -mr-3">
+        <div class="col-12 md:col-6 lg:col-3 mb-3 lg:mb-0">
+            <div class="p-2">
+                <div class="relative">
+                    <div class="cursor-pointer" routerLink="/product/1">
+                        <img src="/assets/images/phone.jpg" class="w-full border-round item">
+                        <button type="button" pRipple 
+                            class="p-ripple p-element p-link w-3rem h-3rem surface-0 hover:surface-200 border-circle shadow-2 inline-flex align-items-center justify-content-center absolute transition-colors transition-duration-300" 
+                            style="top: 1rem; right: 1rem;">
+                            <i class="pi pi-heart text-2xl text-500"></i>
+                        </button>
+                    </div>
+                </div>
+                <div routerLink="/product/1" class="cursor-pointer">
+                    <div class="flex align-items-center justify-content-between mt-3 mb-2">
+                        <span class="text-900 font-medium text-xl">Samsung Galaxy S23</span>
+                        <span class="text-900 text-xl ml-3">1020.0 р.</span>
+                    </div>
+                    <span class="text-600">Черный</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 md:col-6 lg:col-3 mb-3 lg:mb-0">
+            <div class="p-2">
+                <div class="relative">
+                    <div class="cursor-pointer" routerLink="/product/2">
+                        <img src="/assets/images/phone.jpg" class="w-full border-round item">
+                        <button type="button" pRipple 
+                            class="p-ripple p-element p-link w-3rem h-3rem surface-0 hover:surface-200 border-circle shadow-2 inline-flex align-items-center justify-content-center absolute transition-colors transition-duration-300" 
+                            style="top: 1rem; right: 1rem;">
+                            <i class="pi pi-heart text-2xl text-500"></i>
+                        </button>
+                    </div>
+                </div>
+                <div routerLink="/product/2" class="cursor-pointer">
+                    <div class="flex align-items-center justify-content-between mt-3 mb-2">
+                        <span class="text-900 font-medium text-xl">iPhone 15</span>
+                        <span class="text-900 text-xl ml-3">1499.0 р.</span>
+                    </div>
+                    <span class="text-600">Синий</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 md:col-6 lg:col-3 mb-3 lg:mb-0">
+            <div class="p-2">
+                <div class="relative">
+                    <div class="cursor-pointer" routerLink="/product/3">
+                        <img src="/assets/images/phone.jpg" class="w-full border-round item">
+                        <button type="button" pRipple 
+                            class="p-ripple p-element p-link w-3rem h-3rem surface-0 hover:surface-200 border-circle shadow-2 inline-flex align-items-center justify-content-center absolute transition-colors transition-duration-300" 
+                            style="top: 1rem; right: 1rem;">
+                            <i class="pi pi-heart text-2xl text-500"></i>
+                        </button>
+                    </div>
+                </div>
+                <div routerLink="/product/3" class="cursor-pointer">
+                    <div class="flex align-items-center justify-content-between mt-3 mb-2">
+                        <span class="text-900 font-medium text-xl">MacBook Pro</span>
+                        <span class="text-900 text-xl ml-3">2999.0 р.</span>
+                    </div>
+                    <span class="text-600">Серый космос</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 md:col-6 lg:col-3">
+            <div class="p-2">
+                <div class="relative">
+                    <div class="cursor-pointer" routerLink="/product/4">
+                        <img src="/assets/images/phone.jpg" class="w-full border-round item">
+                        <button type="button" pRipple 
+                            class="p-ripple p-element p-link w-3rem h-3rem surface-0 hover:surface-200 border-circle shadow-2 inline-flex align-items-center justify-content-center absolute transition-colors transition-duration-300" 
+                            style="top: 1rem; right: 1rem;">
+                            <i class="pi pi-heart text-2xl text-500"></i>
+                        </button>
+                    </div>
+                </div>
+                <div routerLink="/product/4" class="cursor-pointer">
+                    <div class="flex align-items-center justify-content-between mt-3 mb-2">
+                        <span class="text-900 font-medium text-xl">AirPods Pro</span>
+                        <span class="text-900 text-xl ml-3">399.0 р.</span>
+                    </div>
+                    <span class="text-600">Белый</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-registration 
+    [visible]="showRegistration"
+    (closeDialog)="closeRegistration()"
+    (switchToLogin)="openLogin()">
+</app-registration>
+
+<app-login
+    [visible]="showLogin"
+    (closeDialog)="closeLogin()"
+    (switchToRegistration)="openRegistration()">
+</app-login>

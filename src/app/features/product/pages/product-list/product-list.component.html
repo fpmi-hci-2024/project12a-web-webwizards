@@ -1,0 +1,81 @@
+<div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+    <!-- Фильтры -->
+    <div class="grid">
+        <div class="col-12 lg:col-3">
+            <div class="surface-card p-4 border-round">
+                <h3 class="text-xl mb-4">Фильтры</h3>
+                
+                <!-- Цена -->
+                <div class="mb-4">
+                    <h4 class="text-lg mb-3">Цена</h4>
+                    <div class="flex gap-3">
+                        <input pInputText type="number" placeholder="От" class="w-6">
+                        <input pInputText type="number" placeholder="До" class="w-6">
+                    </div>
+                </div>
+
+                <!-- Производитель -->
+                <div class="mb-4">
+                    <h4 class="text-lg mb-3">Производитель</h4>
+                    <div class="flex flex-column gap-2">
+                        <div class="flex align-items-center">
+                            <p-checkbox name="manufacturer" 
+                                        value="samsung" 
+                                        [(ngModel)]="selectedManufacturers">
+                            </p-checkbox>
+                            <label class="ml-2">Samsung</label>
+                        </div>
+                        <div class="flex align-items-center">
+                            <p-checkbox name="manufacturer" 
+                                        value="apple" 
+                                        [(ngModel)]="selectedManufacturers">
+                            </p-checkbox>
+                            <label class="ml-2">Apple</label>
+                        </div>
+                        <div class="flex align-items-center">
+                            <p-checkbox name="manufacturer" 
+                                        value="xiaomi" 
+                                        [(ngModel)]="selectedManufacturers">
+                            </p-checkbox>
+                            <label class="ml-2">Xiaomi</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button pButton label="Применить" class="w-full"></button>
+            </div>
+        </div>
+
+        <!-- Список продуктов -->
+        <div class="col-12 lg:col-9">
+            <div class="grid">
+                <div class="col-12 md:col-6 lg:col-4 mb-4" *ngFor="let i of [1,2,3,4,5,6]">
+                    <div class="p-2">
+                        <div class="relative">
+                            <div class="cursor-pointer" [routerLink]="['/product', i]">
+                                <img src="/assets/images/phone.jpg" class="w-full border-round">
+                                <button type="button" pRipple 
+                                    class="p-ripple p-element p-link w-3rem h-3rem surface-0 hover:surface-200 border-circle shadow-2 inline-flex align-items-center justify-content-center absolute transition-colors transition-duration-300" 
+                                    style="top: 1rem; right: 1rem;">
+                                    <i class="pi pi-heart text-2xl text-500"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div [routerLink]="['/product', i]" class="cursor-pointer">
+                            <div class="flex align-items-center justify-content-between mt-3 mb-2">
+                                <span class="text-900 font-medium text-xl">Xiaomi Redmi 13</span>
+                                <span class="text-900 text-xl ml-3">1020.0 р.</span>
+                            </div>
+                            <span class="text-600">Черный</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Пагинация -->
+            <div class="flex justify-content-center mt-4">
+                <p-paginator [rows]="12" [totalRecords]="100"></p-paginator>
+            </div>
+        </div>
+    </div>
+</div> 

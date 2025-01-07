@@ -1,0 +1,17 @@
+:host ::ng-deep {
+    .registration-dialog {
+        .p-dialog-header {
+            padding: 2rem 2rem 0 2rem;
+        }
+        
+        .p-dialog-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .p-dialog-content {
+            padding: 0 2rem 2rem 2rem;
+        }
+        z-index: 10000;
+    }
+} 

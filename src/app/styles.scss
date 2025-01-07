@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --primary-color: #0066B3;  // Синий как на сайте
+    --surface-ground: #f8f9fa;
+    --surface-section: #ffffff;
+    --surface-card: #ffffff;
+    --surface-overlay: #ffffff;
+    --surface-border: #dee2e6;
+    --text-color: #495057;
+    --text-color-secondary: #6c757d;
+}
+
+// Переопределение стилей PrimeNG
+.p-button {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.p-button:enabled:hover {
+    background: #0052a3;
+    border-color: #0052a3;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.hover\:text-primary:hover {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+body {
+    background-color: #f0f4f8; // Светлый фон
+    color: #1a1a1a; // Темный текст
+}
+
+a {
+    color: #007bff; // Синий цвет ссылок
+    &:hover {
+        color: #0056b3; // Темно-синий при наведении
+    }
+}
+
+.navbar, .footer {
+    background-color: #003366; // Темно-синий фон
+    color: #ffffff; // Белый текст
+}
+
+@media screen and (min-width: 992px) {
+    .lg\:py-0 {
+        padding-top: 0rem !important;
+        padding-bottom: 0rem !important;
+        align-items: center;
+    }
+}
+
+.item {
+    width: 200px !important;
+    height: 300px !important;
+}
+
+.pi {
+    display: flow !important;
+}
